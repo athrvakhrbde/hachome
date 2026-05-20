@@ -23,7 +23,7 @@ const expectations = [
 
 export function Expect() {
   return (
-    <Section id="expect" className="border-b border-border py-28 md:py-40">
+    <Section id="expect" className="section-pad section-alt border-b border-border">
       <PageContainer>
         <SectionHeader
           eyebrow="What to expect"
@@ -31,13 +31,15 @@ export function Expect() {
           subhead="Think of it as a house that runs like infrastructure, not a program you attend between other obligations."
         />
 
-        <div className="mt-14 grid gap-6 md:mt-16 md:grid-cols-2">
-          {expectations.map((item) => (
-            <article
-              key={item.title}
-              className="border border-border bg-white/[0.02] p-8 backdrop-blur-sm md:p-10"
-            >
-              <h3 className="font-tektur text-xl font-semibold">{item.title}</h3>
+        <div className="mt-16 grid gap-5 md:grid-cols-2">
+          {expectations.map((item, i) => (
+            <article key={item.title} className="card group">
+              <span className="font-tektur text-sm text-accent/70">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="font-tektur mt-4 text-xl font-semibold group-hover:text-accent transition-colors">
+                {item.title}
+              </h3>
               <p className="font-clash mt-4 leading-relaxed text-muted">{item.body}</p>
             </article>
           ))}

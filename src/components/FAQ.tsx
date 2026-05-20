@@ -39,7 +39,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <Section id="faq" className="border-b border-border py-28 md:py-40">
+    <Section id="faq" className="section-pad border-b border-border">
       <PageContainer>
         <SectionHeader
           eyebrow="Questions"
@@ -47,15 +47,15 @@ export function FAQ() {
           subhead="No sales call required to understand how this works."
         />
 
-        <div className="mt-14 space-y-0 border-t border-border md:mt-16">
+        <div className="mt-16 divide-y divide-border border border-border bg-surface-raised/40">
           {faqs.map((item) => (
-            <details key={item.q} className="group border-b border-border">
-              <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 marker:content-none">
+            <details key={item.q} className="group px-6 md:px-8">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-7 marker:content-none transition-colors group-hover:text-accent">
                 <span className="font-tektur text-lg font-medium md:text-xl">{item.q}</span>
-                <span className="font-clash shrink-0 text-accent group-open:hidden">+</span>
-                <span className="font-clash hidden shrink-0 text-accent group-open:inline">−</span>
+                <span className="font-clash mt-1 shrink-0 text-accent group-open:hidden">+</span>
+                <span className="font-clash mt-1 hidden shrink-0 text-accent group-open:inline">−</span>
               </summary>
-              <p className="font-clash pb-6 leading-relaxed text-muted">{item.a}</p>
+              <p className="font-clash max-w-3xl pb-7 leading-relaxed text-muted">{item.a}</p>
             </details>
           ))}
         </div>

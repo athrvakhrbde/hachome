@@ -5,8 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #050505;
+  --surface: #0c0c0c;
+  --foreground: #f4f4f5;
+  --accent: #00ffce;
   --page-max: 72rem;
   --page-gutter: 1.5rem;
   --grid-size: 50px;
@@ -26,11 +28,55 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Clash Grotesk", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: rgba(0, 255, 206, 0.25);
+  background: rgba(0, 255, 206, 0.28);
   color: var(--foreground);
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-clash inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-accent;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-8 bg-accent/60;
+  }
+
+  .card {
+    @apply border border-border bg-surface-raised/80 p-8 backdrop-blur-sm transition-colors duration-300 md:p-10;
+  }
+
+  .card:hover {
+    @apply border-border-strong bg-surface-raised;
+  }
+
+  .card-accent-top {
+    @apply card border-t-2 border-t-accent;
+  }
+
+  .section-pad {
+    @apply py-28 md:py-36;
+  }
+
+  .section-alt {
+    @apply bg-surface/50;
+  }
+
+  .pill {
+    @apply font-clash inline-block border border-border bg-surface-raised/60 px-4 py-2 text-xs text-muted;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 40px rgba(0, 255, 206, 0.35);
+  }
+
+  .link-nav {
+    @apply font-clash text-sm text-muted transition-colors duration-200 hover:text-accent;
+  }
 }
 
 @layer utilities {
@@ -42,7 +88,6 @@ body {
     position: relative;
   }
 
-  /* Trim Tektur display left bearing so logo + hero share one edge */
   .tektur-flush {
     margin-left: -0.04em;
   }
@@ -52,31 +97,41 @@ body {
     position: absolute;
     inset: 0;
     z-index: 2;
-    opacity: 0.04;
+    opacity: 0.035;
     pointer-events: none;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 128px 128px;
   }
-
 }
 
-/* Hero infinite grid — outside @layer so it always applies */
+.hero-glow {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: min(480px, 50vw);
+  height: min(480px, 50vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 255, 206, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero-grid-scroll {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-color: #0a0a0a;
+  background-color: var(--background);
   --grid-x: var(--page-gutter);
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.12) 1px,
+      rgba(0, 255, 206, 0.06) 1px,
       transparent 1px
     ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(0, 255, 206, 0.06) 1px, transparent 1px);
   background-size: var(--grid-size) var(--grid-size);
   background-position: var(--grid-x) 0;
-  animation: hero-bg-scrolling-reverse 0.92s linear infinite;
+  animation: hero-bg-scrolling-reverse 1.2s linear infinite;
 }
 
 @media (min-width: 768px) {
@@ -93,10 +148,10 @@ body {
   z-index: 1;
   pointer-events: none;
   background: radial-gradient(
-    ellipse 120% 80% at 50% 30%,
-    transparent 30%,
-    rgba(10, 10, 10, 0.4) 70%,
-    #0a0a0a 100%
+    ellipse 90% 70% at 20% 80%,
+    transparent 0%,
+    rgba(5, 5, 5, 0.6) 55%,
+    var(--background) 100%
   );
 }
 
@@ -110,4 +165,38 @@ body {
   .hero-grid-scroll {
     animation: none;
   }
+}
+
+.cta-panel {
+  position: relative;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 206, 0.5) 0%,
+    rgba(0, 255, 206, 0.05) 40%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+}
+
+.cta-panel-inner {
+  background: var(--surface);
+  padding: 3rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .cta-panel-inner {
+    padding: 4rem 3rem;
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  color: var(--foreground);
 }

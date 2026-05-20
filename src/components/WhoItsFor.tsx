@@ -18,32 +18,34 @@ const notFor = [
 
 export function WhoItsFor() {
   return (
-    <Section id="who" className="border-b border-border py-28 md:py-40">
+    <Section id="who" className="section-pad border-b border-border">
       <PageContainer>
         <SectionHeader
           eyebrow="05. Who It's For"
           headline="Built for people already in motion."
         />
 
-        <div className="mt-14 grid gap-12 md:mt-16 md:grid-cols-2 md:gap-16">
-          <div>
-            <p className="font-clash text-xs font-semibold uppercase tracking-[0.15em] text-muted">
-              Apply if
-            </p>
-            <ul className="mt-6 space-y-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          <div className="card border-l-4 border-l-accent">
+            <p className="eyebrow mb-0">Apply if</p>
+            <ul className="mt-8 space-y-4">
               {forYou.map((item) => (
-                <li key={item} className="font-clash text-base text-foreground md:text-lg">
+                <li
+                  key={item}
+                  className="font-clash flex items-start gap-3 text-base text-foreground md:text-lg"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="border border-border bg-white/[0.02] p-8 backdrop-blur-sm md:p-10">
+          <div className="card bg-surface/80">
             <p className="font-clash text-xs font-semibold uppercase tracking-[0.15em] text-muted">
               Not for
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-8 space-y-4">
               {notFor.map((item) => (
                 <li key={item} className="font-clash text-base text-muted md:text-lg">
                   {item}
@@ -53,7 +55,7 @@ export function WhoItsFor() {
           </div>
         </div>
 
-        <blockquote className="font-clash mt-16 max-w-2xl border-l-2 border-accent pl-6 text-lg leading-relaxed text-muted md:mt-20 md:text-xl">
+        <blockquote className="font-clash mt-16 max-w-2xl border-l-4 border-accent bg-accent-dim px-8 py-6 text-lg leading-relaxed text-foreground/90 md:mt-20 md:text-xl">
           &ldquo;You should apply if you&apos;ve shipped in the last 90 days and want to
           live with others doing the same.&rdquo;
         </blockquote>

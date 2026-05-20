@@ -22,7 +22,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <Section id="how-it-works" className="border-b border-border py-28 md:py-40">
+    <Section id="how-it-works" className="section-pad section-alt border-b border-border">
       <PageContainer>
         <SectionHeader
           eyebrow="04. How It Works"
@@ -30,17 +30,19 @@ export function HowItWorks() {
           subhead="Month-to-month. No cohorts. No fixed end date."
         />
 
-        <div className="mt-14 grid gap-12 md:grid-cols-3 md:gap-8">
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           {steps.map((step) => (
-            <div key={step.num} className="border-t border-border pt-8">
-              <span className="font-tektur text-sm font-medium text-accent">{step.num}</span>
-              <h3 className="font-tektur mt-4 text-2xl font-semibold">{step.title}</h3>
-              <p className="font-clash mt-3 leading-relaxed text-muted">{step.desc}</p>
-            </div>
+            <article key={step.num} className="card">
+              <span className="font-tektur text-5xl font-bold leading-none text-accent/25">
+                {step.num}
+              </span>
+              <h3 className="font-tektur mt-6 text-2xl font-semibold">{step.title}</h3>
+              <p className="font-clash mt-4 leading-relaxed text-muted">{step.desc}</p>
+            </article>
           ))}
         </div>
 
-        <p className="font-clash mt-16 max-w-2xl text-sm text-muted md:mt-20">
+        <p className="font-clash mt-12 max-w-2xl text-sm text-muted md:mt-16">
           Some spots available through volunteer labor in lieu of fees.
         </p>
       </PageContainer>

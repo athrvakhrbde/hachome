@@ -5,11 +5,11 @@ import { PageContainer } from "./PageContainer";
 import { SectionHeader } from "./SectionHeader";
 
 const inputClass =
-  "w-full border border-border bg-white/[0.02] px-4 py-3 font-clash text-sm text-foreground backdrop-blur-sm";
+  "w-full border border-border bg-surface-raised px-4 py-3.5 font-clash text-sm text-foreground transition-colors focus:border-accent/50 focus:bg-surface focus:outline-none";
 
 export function ApplyForm() {
   return (
-    <Section className="py-28 md:py-40">
+    <Section className="section-pad section-alt">
       <PageContainer>
         <SectionHeader
           eyebrow="07. Apply"
@@ -21,7 +21,7 @@ export function ApplyForm() {
           action={`mailto:${site.email}`}
           method="post"
           encType="text/plain"
-          className="mt-12 max-w-xl space-y-6"
+          className="card mt-12 max-w-xl space-y-6 border-accent/20"
         >
           <div>
             <label htmlFor="name" className="font-clash mb-2 block text-xs font-medium uppercase tracking-wider text-muted">

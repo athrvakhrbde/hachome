@@ -12,7 +12,7 @@ export default function ApplyPage() {
   return (
     <main>
       <Nav />
-      <div className="pt-24">
+      <div className="bg-background pt-24">
         <ApplyForm />
       </div>
       <Footer />

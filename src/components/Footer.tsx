@@ -5,9 +5,9 @@ import { navLinks, site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="py-16 md:py-24">
+    <footer className="border-t border-border bg-surface/30 py-20 md:py-28">
       <PageContainer>
-        <div className="grid gap-12 md:grid-cols-2 md:gap-16 lg:grid-cols-4">
+        <div className="grid gap-14 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
               <Image
@@ -18,7 +18,7 @@ export function Footer() {
                 className="h-9 w-auto"
               />
             </Link>
-            <p className="font-tektur mt-8 max-w-md text-lg font-medium leading-snug text-muted">
+            <p className="font-tektur mt-8 max-w-md text-xl font-medium leading-snug text-foreground/90">
               {site.name} is not a hotel. It is where your best year of work happens.
             </p>
             <p className="font-clash mt-4 text-sm text-muted">
@@ -27,25 +27,17 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-clash text-xs font-semibold uppercase tracking-[0.15em] text-muted">
-              Explore
-            </p>
-            <ul className="mt-4 space-y-2">
+            <p className="eyebrow">Explore</p>
+            <ul className="mt-6 space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="font-clash text-sm text-foreground/80 transition-colors hover:text-accent"
-                  >
+                  <Link href={link.href} className="link-nav">
                     {link.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link
-                  href="/apply"
-                  className="font-clash text-sm text-accent transition-opacity hover:opacity-80"
-                >
+                <Link href="/apply" className="font-clash text-sm font-medium text-accent">
                   Apply
                 </Link>
               </li>
@@ -53,16 +45,11 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-clash text-xs font-semibold uppercase tracking-[0.15em] text-muted">
-              Contact
-            </p>
-            <ul className="mt-4 space-y-2 font-clash text-sm text-foreground/80">
-              <li>{site.location}</li>
+            <p className="eyebrow">Contact</p>
+            <ul className="mt-6 space-y-3 font-clash text-sm">
+              <li className="text-muted">{site.location}</li>
               <li>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="transition-colors hover:text-accent"
-                >
+                <a href={`mailto:${site.email}`} className="link-nav">
                   {site.email}
                 </a>
               </li>
@@ -71,7 +58,7 @@ export function Footer() {
                   href={site.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-accent"
+                  className="link-nav"
                 >
                   {site.twitterHandle}
                 </a>
@@ -80,7 +67,7 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="font-clash mt-16 border-t border-border pt-8 text-xs text-muted/60">
+        <p className="font-clash mt-16 border-t border-border pt-8 text-xs text-muted/50">
           © {new Date().getFullYear()} {site.name}
         </p>
       </PageContainer>
