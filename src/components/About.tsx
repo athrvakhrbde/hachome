@@ -10,7 +10,7 @@ export function About() {
     <Section id="about" className="section-pad border-b border-border">
       <PageContainer>
         <SectionHeader
-          eyebrow="About"
+          eyebrow="02. About"
           headline="A live-in house for builders."
           subhead={`${site.name} is a hacker house in ${site.location}. Apply to get in touch.`}
         />

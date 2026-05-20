@@ -59,6 +59,10 @@ body {
     @apply card border-t-2 border-t-accent;
   }
 
+  .stay-card {
+    @apply card-accent-top flex flex-col;
+  }
+
   .section-pad {
     @apply py-28 md:py-36;
   }
