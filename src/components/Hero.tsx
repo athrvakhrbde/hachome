@@ -39,7 +39,7 @@ export function Hero() {
           className="font-clash mt-10 max-w-xl text-lg leading-relaxed text-muted md:mt-12 md:text-xl"
         >
           HackHome exists so ambitious founders and hackers can go full-time on what
-          they are building — with housing, meals, workspace, and peers who get it.
+          they are building, with housing, meals, workspace, and peers who get it.
         </motion.p>
 
         <motion.div

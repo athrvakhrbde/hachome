@@ -8,7 +8,7 @@ import { SectionHeader } from "./SectionHeader";
 const faqs = [
   {
     q: "Do I need to be a founder?",
-    a: "No. We want inventors — people who bring novel work into the world. That usually means a founder or a hacker with something live, not someone still sketching on a whiteboard.",
+    a: "No. We want inventors, people who bring novel work into the world. That usually means a founder or a hacker with something live, not someone still sketching on a whiteboard.",
   },
   {
     q: "How long can I stay?",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "What about food?",
-    a: "All meals are included. You eat with other residents — less delivery apps, more momentum.",
+    a: "All meals are included. You eat with other residents. Less delivery apps, more momentum.",
   },
   {
     q: "Is this remote?",

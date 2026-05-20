@@ -13,7 +13,7 @@ const steps = [
   {
     num: "02",
     title: "Move In",
-    desc: "Room, meals, workspace, internet — live on day one. Set up once. Stop negotiating with your calendar for basic survival.",
+    desc: "Room, meals, workspace, internet. Live on day one. Set up once. Stop negotiating with your calendar for basic survival.",
   },
   {
     num: "03",
@@ -30,7 +30,7 @@ export function HowItWorks() {
     >
       <PageContainer>
         <SectionHeader
-          eyebrow="04 — How It Works"
+          eyebrow="04. How It Works"
           headline="Three steps. No ceremony."
           subhead="Month-to-month. No cohorts. No fixed end date."
         />

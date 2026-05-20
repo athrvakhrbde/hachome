@@ -6,7 +6,6 @@ import { Included } from "@/components/Included";
 import { HowItWorks } from "@/components/HowItWorks";
 import { WhoItsFor } from "@/components/WhoItsFor";
 import { Programming } from "@/components/Programming";
-import { Residents } from "@/components/Residents";
 import { FAQ } from "@/components/FAQ";
 import { CtaBand } from "@/components/CtaBand";
 import { Footer } from "@/components/Footer";
@@ -22,7 +21,6 @@ export default function Home() {
       <HowItWorks />
       <WhoItsFor />
       <Programming />
-      <Residents />
       <FAQ />
       <CtaBand />
       <Footer />

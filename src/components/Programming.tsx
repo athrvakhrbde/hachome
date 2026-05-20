@@ -30,7 +30,7 @@ export function Programming() {
     >
       <PageContainer>
         <SectionHeader
-          eyebrow="06 — Programming"
+          eyebrow="06. Programming"
           headline="Structure without surveillance."
           subhead="Rhythm that compounds. No mandatory fun."
         />
@@ -47,7 +47,7 @@ export function Programming() {
               <ul className="mt-6 space-y-2">
                 {block.items.map((item) => (
                   <li key={item} className="font-clash text-foreground">
-                    → {item}
+                    {item}
                   </li>
                 ))}
               </ul>

@@ -13,13 +13,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hackhome.in";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "HackHome — build. live. ship.",
-    template: "%s — HackHome",
+    default: "HackHome | build. live. ship.",
+    template: "%s | HackHome",
   },
   description:
-    "HackHome is a live-in workspace for founders and hackers in Bangalore. Meals, mentorship, and momentum — bundled.",
+    "HackHome is a live-in workspace for founders and hackers in Bangalore. Meals, mentorship, and momentum, bundled.",
   openGraph: {
-    title: "HackHome — build. live. ship.",
+    title: "HackHome | build. live. ship.",
     description:
       "A hacker house in Bangalore for serious builders. Live-in workspace, meals, mentorship, momentum.",
     url: siteUrl,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "HackHome — build. live. ship.",
+    title: "HackHome | build. live. ship.",
     description:
       "A hacker house in Bangalore for serious builders.",
   },

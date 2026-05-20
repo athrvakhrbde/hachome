@@ -42,7 +42,7 @@ export function Included() {
     >
       <PageContainer>
         <SectionHeader
-          eyebrow="03 — What's Included"
+          eyebrow="03. What's Included"
           headline="Everything handled. Nothing in your way."
           subhead="Live, work, and grow under one roof. No nickel-and-diming. No admin tax."
         />
@@ -56,7 +56,7 @@ export function Included() {
               <ul className="mt-6 space-y-3">
                 {group.items.map((item) => (
                   <li key={item} className="font-clash text-sm leading-snug text-foreground md:text-base">
-                    → {item}
+                    {item}
                   </li>
                 ))}
               </ul>

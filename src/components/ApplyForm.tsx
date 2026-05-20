@@ -46,7 +46,7 @@ export function ApplyForm() {
     <AnimatedSection className="py-28 md:py-40">
       <PageContainer>
         <SectionHeader
-          eyebrow="07 — Apply"
+          eyebrow="07. Apply"
           headline="Rolling admissions."
           subhead="We read every application. Short answers. No pitch deck required."
         />
@@ -99,7 +99,6 @@ export function ApplyForm() {
             <input
               id="social"
               type="url"
-              placeholder="https://"
               className={inputClass}
               {...register("social", { required: "Required" })}
             />
@@ -148,7 +147,7 @@ export function ApplyForm() {
 
           <p className="font-clash text-sm text-muted">
             <a href="/" className="text-accent transition-opacity hover:opacity-80">
-              ← Back to home
+              Back to home
             </a>
           </p>
 

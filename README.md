@@ -1,6 +1,6 @@
 # HackHome
 
-Landing site for HackHome — a live-in workspace for founders and hackers in Bangalore.
+Landing site for HackHome, a live-in workspace for founders and hackers in Bangalore.
 
 ## Stack
 

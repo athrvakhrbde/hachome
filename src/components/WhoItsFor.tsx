@@ -26,7 +26,7 @@ export function WhoItsFor() {
     >
       <PageContainer>
         <SectionHeader
-          eyebrow="05 — Who It's For"
+          eyebrow="05. Who It's For"
           headline="Built for people already in motion."
         />
 
@@ -38,7 +38,7 @@ export function WhoItsFor() {
             <ul className="mt-6 space-y-3">
               {forYou.map((item) => (
                 <li key={item} className="font-clash text-base text-foreground md:text-lg">
-                  → {item}
+                  {item}
                 </li>
               ))}
             </ul>
@@ -51,7 +51,7 @@ export function WhoItsFor() {
             <ul className="mt-6 space-y-3">
               {notFor.map((item) => (
                 <li key={item} className="font-clash text-base text-muted md:text-lg">
-                  — {item}
+                  {item}
                 </li>
               ))}
             </ul>

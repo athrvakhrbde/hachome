@@ -4,7 +4,7 @@ import { ApplyForm } from "@/components/ApplyForm";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Apply — HackHome",
+  title: "Apply | HackHome",
   description: "Apply to live at HackHome. Rolling admissions for founders and hackers in Bangalore.",
 };
 

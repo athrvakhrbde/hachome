@@ -7,7 +7,7 @@ import { SectionHeader } from "./SectionHeader";
 const expectations = [
   {
     title: "Demo what you ship",
-    body: "Present work to operators and investors who actually fund builders — not a theater stage, a room that matters.",
+    body: "Present work to operators and investors who actually fund builders. Not a theater stage. A room that matters.",
   },
   {
     title: "Stay accountable",
@@ -15,7 +15,7 @@ const expectations = [
   },
   {
     title: "Meet people ahead of you",
-    body: "Founder dinners, guest residencies, office hours — access to people who have already done the hard version of your problem.",
+    body: "Founder dinners, guest residencies, office hours. Access to people who have already done the hard version of your problem.",
   },
   {
     title: "Live like a human",
@@ -30,7 +30,7 @@ export function Expect() {
         <SectionHeader
           eyebrow="What to expect"
           headline="Full-time building, with everything else handled."
-          subhead="Think of it as a house that runs like infrastructure — not a program you attend between other obligations."
+          subhead="Think of it as a house that runs like infrastructure, not a program you attend between other obligations."
         />
 
         <div className="mt-14 grid gap-6 md:mt-16 md:grid-cols-2">
