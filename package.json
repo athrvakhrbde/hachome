@@ -2,11 +2,17 @@
   "name": "hachome",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "preview": "npx serve out",
-    "lint": "next lint"
+    "dev:clean": "rm -rf .next && next dev",
+    "build": "next build && node scripts/strip-hydration.mjs",
+    "build:clean": "rm -rf .next out && npm run build",
+    "preview": "npx serve out -l 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "14.2.35",

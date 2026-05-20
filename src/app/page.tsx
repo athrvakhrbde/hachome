@@ -1,12 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
-import { Problem } from "@/components/Problem";
-import { Expect } from "@/components/Expect";
-import { Included } from "@/components/Included";
-import { HowItWorks } from "@/components/HowItWorks";
-import { WhoItsFor } from "@/components/WhoItsFor";
-import { Programming } from "@/components/Programming";
-import { FAQ } from "@/components/FAQ";
+import { Ticker } from "@/components/Ticker";
+import { About } from "@/components/About";
 import { CtaBand } from "@/components/CtaBand";
 import { Footer } from "@/components/Footer";
 
@@ -15,13 +10,8 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
-      <Problem />
-      <Expect />
-      <Included />
-      <HowItWorks />
-      <WhoItsFor />
-      <Programming />
-      <FAQ />
+      <Ticker />
+      <About />
       <CtaBand />
       <Footer />
     </main>

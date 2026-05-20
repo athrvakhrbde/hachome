@@ -1,19 +1,39 @@
-# HackHome
+# hackhome
 
-Static HTML marketing site for HackHome. Built with Next.js static export (no server runtime, no client JS bundles for UI).
+Production static site for [hackhome](https://hackhome.in). Next.js builds to plain HTML + CSS in `out/` with **no client JavaScript** in production.
 
-## Local preview
+## Production build
 
 ```bash
-npm install
-npm run build
-npm run preview
+npm ci
+cp .env.example .env   # set NEXT_PUBLIC_SITE_URL to your live domain
+npm run build:clean
+npm run preview        # http://localhost:3000
 ```
 
-Open the URL shown by `serve` (usually http://localhost:3000). Built files live in `out/`.
+`build:clean` wipes `.next` and `out/`, then exports and strips hydration scripts.
 
-## Deploy
+## Deploy (Vercel)
 
-**Do not deploy until explicitly requested.** When ready, set `NEXT_PUBLIC_SITE_URL` to your production domain and run `npm run build`, then host the `out/` folder on any static host (or re-enable Vercel with static output).
+1. Set `NEXT_PUBLIC_SITE_URL` in project env (Production + Preview).
+2. Connect repo; `vercel.json` points at `out/` after `npm run build`.
+3. Promote when ready.
 
-Apply form uses `mailto:` (opens the user's email client). Wire Formspree or a backend later if you need server-side intake.
+Works on any static host: upload the `out/` folder (Netlify, Cloudflare Pages, S3, etc.).
+
+## Local dev
+
+`npm run dev` is for editing only. Preview production output with `npm run build && npm run preview`.
+
+If dev shows a white screen or `Cannot find module './948.js'`:
+
+```bash
+npm run dev:clean
+```
+
+## Stack
+
+- Next.js 14 static export
+- Tailwind CSS
+- Apply → [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfz5s_2biXXOEodc0tRTLv5o0BGZrpGZV_7Y4P1BYo84uZFtQ/viewform?usp=send_form)
+- Contact → [@hackhomehq](https://x.com/hackhomehq)

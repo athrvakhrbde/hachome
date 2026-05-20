@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ReactNode } from "react";
 
 type ButtonLinkProps = {
@@ -6,6 +5,7 @@ type ButtonLinkProps = {
   children: ReactNode;
   variant?: "primary" | "secondary" | "ghost";
   className?: string;
+  external?: boolean;
 };
 
 const variants = {
@@ -21,13 +21,19 @@ export function ButtonLink({
   children,
   variant = "primary",
   className = "",
+  external,
 }: ButtonLinkProps) {
+  const isExternal = external ?? href.startsWith("http");
+
   return (
-    <Link
+    <a
       href={href}
       className={`font-clash inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-wide transition-all duration-200 ${variants[variant]} ${className}`.trim()}
+      {...(isExternal
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
     >
       {children}
-    </Link>
+    </a>
   );
 }

@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
-import { navLinks } from "@/lib/site";
+import { site } from "@/lib/site";
+import { HackhomeLogo } from "./HackhomeLogo";
 import { PageContainer } from "./PageContainer";
 import { ButtonLink } from "./ButtonLink";
 
@@ -8,48 +7,20 @@ export function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/85 backdrop-blur-xl">
       <PageContainer className="flex items-center justify-between py-4 md:py-5">
-        <Link href="/" className="block shrink-0 leading-none">
-          <Image
-            src="/hackhome-logo.png"
-            alt="HackHome"
-            width={140}
-            height={56}
-            className="h-9 w-auto md:h-10"
-            priority
-          />
-        </Link>
+        <a href="/" className="block shrink-0 leading-none">
+          <HackhomeLogo priority />
+        </a>
 
         <div className="hidden items-center gap-10 lg:flex">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="link-nav">
-              {link.label}
-            </Link>
-          ))}
-          <ButtonLink href="/apply" className="px-6 py-2.5 text-xs">
+          <ButtonLink href={site.applyUrl} className="px-6 py-2.5 text-xs">
             Apply
           </ButtonLink>
         </div>
 
         <div className="flex items-center gap-4 lg:hidden">
-          <ButtonLink href="/apply" className="px-5 py-2.5 text-xs">
+          <ButtonLink href={site.applyUrl} className="px-5 py-2.5 text-xs">
             Apply
           </ButtonLink>
-          <details className="relative">
-            <summary className="font-clash cursor-pointer list-none text-sm text-muted marker:content-none">
-              Menu
-            </summary>
-            <div className="absolute right-0 top-full z-50 mt-4 min-w-[12rem] border border-border-strong bg-surface-raised py-3 shadow-card">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="font-clash block px-5 py-2.5 text-foreground transition-colors hover:bg-accent-dim hover:text-accent"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </details>
         </div>
       </PageContainer>
     </nav>
