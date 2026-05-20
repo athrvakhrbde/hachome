@@ -9,8 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#0a0a0a",
+        foreground: "#ededed",
+        muted: "#a3a3a3",
+        accent: "#00ffce",
+        border: "rgba(255, 255, 255, 0.08)",
+      },
+      fontFamily: {
+        tektur: ["var(--font-tektur)", "sans-serif"],
+        clash: ['"Clash Grotesk"', "sans-serif"],
+      },
+      maxWidth: {
+        content: "72rem",
       },
     },
   },
