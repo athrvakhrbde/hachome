@@ -141,10 +141,16 @@ export function ApplyForm() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="font-clash w-full bg-accent px-8 py-4 text-sm font-semibold text-background transition-opacity hover:opacity-90 disabled:opacity-50 sm:w-auto"
+            className="font-clash w-full bg-accent px-8 py-4 text-sm font-semibold text-background transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
           >
             {status === "loading" ? "Submitting…" : "Submit Application"}
           </button>
+
+          <p className="font-clash text-sm text-muted">
+            <a href="/" className="text-accent transition-opacity hover:opacity-80">
+              ← Back to home
+            </a>
+          </p>
 
           {status === "success" && (
             <p className="font-clash text-sm text-accent">

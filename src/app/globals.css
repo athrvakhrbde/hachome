@@ -28,6 +28,11 @@ body {
   font-family: "Clash Grotesk", sans-serif;
 }
 
+::selection {
+  background: rgba(0, 255, 206, 0.25);
+  color: var(--foreground);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

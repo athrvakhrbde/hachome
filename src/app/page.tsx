@@ -1,10 +1,14 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
+import { Expect } from "@/components/Expect";
 import { Included } from "@/components/Included";
 import { HowItWorks } from "@/components/HowItWorks";
 import { WhoItsFor } from "@/components/WhoItsFor";
 import { Programming } from "@/components/Programming";
+import { Residents } from "@/components/Residents";
+import { FAQ } from "@/components/FAQ";
+import { CtaBand } from "@/components/CtaBand";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -13,10 +17,14 @@ export default function Home() {
       <Nav />
       <Hero />
       <Problem />
+      <Expect />
       <Included />
       <HowItWorks />
       <WhoItsFor />
       <Programming />
+      <Residents />
+      <FAQ />
+      <CtaBand />
       <Footer />
     </main>
   );
