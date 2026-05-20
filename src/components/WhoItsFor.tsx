@@ -1,6 +1,4 @@
-"use client";
-
-import { AnimatedSection } from "./AnimatedSection";
+import { Section } from "./Section";
 import { PageContainer } from "./PageContainer";
 import { SectionHeader } from "./SectionHeader";
 
@@ -20,10 +18,7 @@ const notFor = [
 
 export function WhoItsFor() {
   return (
-    <AnimatedSection
-      id="who"
-      className="border-b border-border py-28 md:py-40"
-    >
+    <Section id="who" className="border-b border-border py-28 md:py-40">
       <PageContainer>
         <SectionHeader
           eyebrow="05. Who It's For"
@@ -63,6 +58,6 @@ export function WhoItsFor() {
           live with others doing the same.&rdquo;
         </blockquote>
       </PageContainer>
-    </AnimatedSection>
+    </Section>
   );
 }

@@ -1,26 +1,15 @@
-"use client";
-
-import { AnimatedSection } from "./AnimatedSection";
+import { Section } from "./Section";
 import { PageContainer } from "./PageContainer";
 import { SectionHeader } from "./SectionHeader";
 
 const groups = [
   {
     title: "Live",
-    items: [
-      "Private room",
-      "All meals",
-      "Laundry",
-      "Utilities",
-    ],
+    items: ["Private room", "All meals", "Laundry", "Utilities"],
   },
   {
     title: "Work",
-    items: [
-      "24/7 deep-focus workspace",
-      "High-speed internet",
-      "Quiet hours",
-    ],
+    items: ["24/7 deep-focus workspace", "High-speed internet", "Quiet hours"],
   },
   {
     title: "Grow",
@@ -36,10 +25,7 @@ const groups = [
 
 export function Included() {
   return (
-    <AnimatedSection
-      id="included"
-      className="border-b border-border py-28 md:py-40"
-    >
+    <Section id="included" className="border-b border-border py-28 md:py-40">
       <PageContainer>
         <SectionHeader
           eyebrow="03. What's Included"
@@ -64,6 +50,6 @@ export function Included() {
           ))}
         </div>
       </PageContainer>
-    </AnimatedSection>
+    </Section>
   );
 }

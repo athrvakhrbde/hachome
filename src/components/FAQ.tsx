@@ -1,7 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import { AnimatedSection } from "./AnimatedSection";
+import { Section } from "./Section";
 import { PageContainer } from "./PageContainer";
 import { SectionHeader } from "./SectionHeader";
 
@@ -40,30 +37,9 @@ const faqs = [
   },
 ];
 
-function FaqItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border-b border-border">
-      <button
-        type="button"
-        onClick={() => setOpen(!open)}
-        className="flex w-full items-start justify-between gap-6 py-6 text-left"
-        aria-expanded={open}
-      >
-        <span className="font-tektur text-lg font-medium md:text-xl">{q}</span>
-        <span className="font-clash shrink-0 text-accent">{open ? "−" : "+"}</span>
-      </button>
-      {open && (
-        <p className="font-clash pb-6 leading-relaxed text-muted">{a}</p>
-      )}
-    </div>
-  );
-}
-
 export function FAQ() {
   return (
-    <AnimatedSection id="faq" className="border-b border-border py-28 md:py-40">
+    <Section id="faq" className="border-b border-border py-28 md:py-40">
       <PageContainer>
         <SectionHeader
           eyebrow="Questions"
@@ -71,12 +47,19 @@ export function FAQ() {
           subhead="No sales call required to understand how this works."
         />
 
-        <div className="mt-14 border-t border-border md:mt-16">
+        <div className="mt-14 space-y-0 border-t border-border md:mt-16">
           {faqs.map((item) => (
-            <FaqItem key={item.q} q={item.q} a={item.a} />
+            <details key={item.q} className="group border-b border-border">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 marker:content-none">
+                <span className="font-tektur text-lg font-medium md:text-xl">{item.q}</span>
+                <span className="font-clash shrink-0 text-accent group-open:hidden">+</span>
+                <span className="font-clash hidden shrink-0 text-accent group-open:inline">−</span>
+              </summary>
+              <p className="font-clash pb-6 leading-relaxed text-muted">{item.a}</p>
+            </details>
           ))}
         </div>
       </PageContainer>
-    </AnimatedSection>
+    </Section>
   );
 }

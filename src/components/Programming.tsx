@@ -1,6 +1,4 @@
-"use client";
-
-import { AnimatedSection } from "./AnimatedSection";
+import { Section } from "./Section";
 import { PageContainer } from "./PageContainer";
 import { SectionHeader } from "./SectionHeader";
 
@@ -24,10 +22,7 @@ const schedule = [
 
 export function Programming() {
   return (
-    <AnimatedSection
-      id="programming"
-      className="border-b border-border py-28 md:py-40"
-    >
+    <Section id="programming" className="border-b border-border py-28 md:py-40">
       <PageContainer>
         <SectionHeader
           eyebrow="06. Programming"
@@ -41,9 +36,7 @@ export function Programming() {
               <h3 className="font-tektur text-lg font-semibold uppercase tracking-wide text-accent">
                 {block.cadence}
               </h3>
-              <p className="font-clash mt-3 text-sm leading-relaxed text-muted">
-                {block.desc}
-              </p>
+              <p className="font-clash mt-3 text-sm leading-relaxed text-muted">{block.desc}</p>
               <ul className="mt-6 space-y-2">
                 {block.items.map((item) => (
                   <li key={item} className="font-clash text-foreground">
@@ -55,6 +48,6 @@ export function Programming() {
           ))}
         </div>
       </PageContainer>
-    </AnimatedSection>
+    </Section>
   );
 }

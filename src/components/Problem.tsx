@@ -1,6 +1,4 @@
-"use client";
-
-import { AnimatedSection } from "./AnimatedSection";
+import { Section } from "./Section";
 import { PageContainer } from "./PageContainer";
 import { SectionHeader } from "./SectionHeader";
 
@@ -15,7 +13,7 @@ const friction = [
 
 export function Problem() {
   return (
-    <AnimatedSection id="problem" className="border-b border-border py-28 md:py-40">
+    <Section id="problem" className="border-b border-border py-28 md:py-40">
       <PageContainer>
         <SectionHeader
           eyebrow="02. The Problem"
@@ -40,6 +38,6 @@ export function Problem() {
           HackHome removes all of it.
         </p>
       </PageContainer>
-    </AnimatedSection>
+    </Section>
   );
 }

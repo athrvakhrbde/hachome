@@ -13,6 +13,8 @@
 /.next/
 /out/
 
+# deploy gate: do not push to main until deploy is approved
+
 # production
 /build
 

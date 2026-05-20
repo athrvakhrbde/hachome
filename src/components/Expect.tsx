@@ -1,6 +1,4 @@
-"use client";
-
-import { AnimatedSection } from "./AnimatedSection";
+import { Section } from "./Section";
 import { PageContainer } from "./PageContainer";
 import { SectionHeader } from "./SectionHeader";
 
@@ -25,7 +23,7 @@ const expectations = [
 
 export function Expect() {
   return (
-    <AnimatedSection id="expect" className="border-b border-border py-28 md:py-40">
+    <Section id="expect" className="border-b border-border py-28 md:py-40">
       <PageContainer>
         <SectionHeader
           eyebrow="What to expect"
@@ -37,7 +35,7 @@ export function Expect() {
           {expectations.map((item) => (
             <article
               key={item.title}
-              className="border border-border bg-white/[0.02] p-8 backdrop-blur-sm transition-colors hover:border-white/15 md:p-10"
+              className="border border-border bg-white/[0.02] p-8 backdrop-blur-sm md:p-10"
             >
               <h3 className="font-tektur text-xl font-semibold">{item.title}</h3>
               <p className="font-clash mt-4 leading-relaxed text-muted">{item.body}</p>
@@ -45,6 +43,6 @@ export function Expect() {
           ))}
         </div>
       </PageContainer>
-    </AnimatedSection>
+    </Section>
   );
 }

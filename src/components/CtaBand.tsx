@@ -1,12 +1,10 @@
-"use client";
-
-import { AnimatedSection } from "./AnimatedSection";
+import { Section } from "./Section";
 import { PageContainer } from "./PageContainer";
 import { ButtonLink } from "./ButtonLink";
 
 export function CtaBand() {
   return (
-    <AnimatedSection className="border-b border-border bg-white/[0.02] py-24 md:py-32">
+    <Section className="border-b border-border bg-white/[0.02] py-24 md:py-32">
       <PageContainer className="text-center md:text-left">
         <p className="font-clash text-xs font-medium uppercase tracking-[0.2em] text-muted">
           Join the house
@@ -25,6 +23,6 @@ export function CtaBand() {
           </ButtonLink>
         </div>
       </PageContainer>
-    </AnimatedSection>
+    </Section>
   );
 }

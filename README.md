@@ -1,36 +1,19 @@
 # HackHome
 
-Landing site for HackHome, a live-in workspace for founders and hackers in Bangalore.
+Static HTML marketing site for HackHome. Built with Next.js static export (no server runtime, no client JS bundles for UI).
 
-## Stack
-
-- Next.js 14 (App Router)
-- Tailwind CSS
-- Framer Motion
-- react-hook-form
-
-## Scripts
+## Local preview
 
 ```bash
 npm install
-npm run dev      # local dev
-npm run build    # production build
-npm run start    # run production build locally
-npm run lint
+npm run build
+npm run preview
 ```
 
-## Environment
-
-Copy `.env.example` to `.env.local` for local development:
-
-```bash
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-```
-
-On Vercel, set `NEXT_PUBLIC_SITE_URL` to your production domain.
+Open the URL shown by `serve` (usually http://localhost:3000). Built files live in `out/`.
 
 ## Deploy
 
-Deploys to [Vercel](https://vercel.com). Push to `main` triggers production if the project is linked.
+**Do not deploy until explicitly requested.** When ready, set `NEXT_PUBLIC_SITE_URL` to your production domain and run `npm run build`, then host the `out/` folder on any static host (or re-enable Vercel with static output).
 
-Apply form submissions POST to `/api/apply` and are logged server-side. Wire a CRM, email, or database when ready.
+Apply form uses `mailto:` (opens the user's email client). Wire Formspree or a backend later if you need server-side intake.

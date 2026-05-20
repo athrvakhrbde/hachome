@@ -1,19 +1,14 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { navLinks } from "@/lib/site";
 import { PageContainer } from "./PageContainer";
 import { ButtonLink } from "./ButtonLink";
 
 export function Nav() {
-  const [open, setOpen] = useState(false);
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <PageContainer className="flex items-center justify-between py-4 md:py-5">
-        <Link href="/" className="block shrink-0 leading-none" onClick={() => setOpen(false)}>
+        <Link href="/" className="block shrink-0 leading-none">
           <Image
             src="/hackhome-logo.png"
             alt="HackHome"
@@ -43,34 +38,24 @@ export function Nav() {
           <ButtonLink href="/apply" className="px-5 py-2.5 text-xs">
             Apply
           </ButtonLink>
-          <button
-            type="button"
-            aria-expanded={open}
-            aria-label="Toggle menu"
-            className="font-clash text-sm text-muted"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? "Close" : "Menu"}
-          </button>
+          <details className="relative">
+            <summary className="font-clash cursor-pointer list-none text-sm text-muted marker:content-none">
+              Menu
+            </summary>
+            <div className="absolute right-0 top-full z-50 mt-4 min-w-[12rem] border border-border bg-background py-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-clash block px-6 py-2 text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </details>
         </div>
       </PageContainer>
-
-      {open && (
-        <div className="border-t border-border bg-background lg:hidden">
-          <PageContainer className="flex flex-col gap-4 py-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-clash text-lg text-foreground"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </PageContainer>
-        </div>
-      )}
     </nav>
   );
 }
