@@ -7,7 +7,7 @@ import { PageContainer } from "@/components/PageContainer";
 
 export const metadata = createPageMetadata({
   title: "Apply",
-  description: `Apply to ${site.name}. Rolling admissions for builders in ${site.location}.`,
+  description: `Apply to ${site.displayName}. Live together for 3 to 6 months in ${site.location}.`,
   path: "/apply",
 });
 

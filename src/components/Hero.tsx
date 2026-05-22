@@ -17,7 +17,7 @@ export function Hero() {
       </div>
       <PageContainer className="relative z-10">
         <p className="font-clash mb-10 text-xs font-medium uppercase tracking-[0.25em] text-muted">
-          Live-in hacker house for builders
+          {site.heroEyebrow}
         </p>
 
         <h1 className="font-tektur tektur-flush m-0 block max-w-5xl text-balance text-6xl font-normal leading-[0.92] tracking-tight md:text-8xl lg:text-[7.5rem]">
@@ -34,8 +34,8 @@ export function Hero() {
 
         <div className="mt-14 flex flex-col gap-4 sm:flex-row sm:items-center md:mt-12">
           <ButtonLink href={site.applyUrl}>Apply</ButtonLink>
-          <ButtonLink href="/#about" variant="secondary">
-            About
+          <ButtonLink href="/#community" variant="secondary">
+            Community
           </ButtonLink>
         </div>
       </PageContainer>

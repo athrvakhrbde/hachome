@@ -63,6 +63,19 @@ body {
     @apply card-accent-top flex flex-col;
   }
 
+  .community-pillar {
+    @apply grid min-h-[7.5rem] grid-cols-[3rem_1fr] gap-4 border border-border bg-surface-raised/50 p-6 transition-colors duration-300 md:min-h-[8rem] md:p-7;
+  }
+
+  .community-pillar:hover {
+    @apply border-border-strong bg-surface-raised;
+  }
+
+  .community-callout {
+    @apply border border-border bg-surface-raised/40 px-8 py-6 md:px-10 md:py-8;
+    border-left: 2px solid rgba(0, 255, 206, 0.45);
+  }
+
   .section-pad {
     @apply py-28 md:py-36;
   }

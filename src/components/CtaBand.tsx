@@ -13,7 +13,7 @@ export function CtaBand() {
               If you&apos;re a builder
             </p>
             <h2 className="font-tektur tektur-flush mt-6 text-4xl font-bold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
-              Interested in {site.name}?
+              Interested in {site.displayName}?
             </h2>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row md:items-start">
               <ButtonLink href={site.applyUrl}>Apply</ButtonLink>

@@ -15,7 +15,7 @@ export function Footer() {
               {site.tagline}
             </p>
             <p className="font-clash mt-4 text-sm text-muted">
-              Live-in hacker house in {site.location}.
+              Live together for 3 to 6 months in {site.location}.
             </p>
           </div>
 
