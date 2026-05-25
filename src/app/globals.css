@@ -8,7 +8,9 @@
   --background: #050505;
   --surface: #0c0c0c;
   --foreground: #f4f4f5;
-  --accent: #00ffce;
+  --muted: #a1a1aa;
+  --muted-subtle: #858585;
+  --accent: #f92119;
   --page-max: 72rem;
   --page-gutter: 1.5rem;
   --grid-size: 50px;
@@ -33,7 +35,7 @@ body {
 }
 
 ::selection {
-  background: rgba(0, 255, 206, 0.28);
+  background: rgba(249, 33, 25, 0.4);
   color: var(--foreground);
 }
 
@@ -44,7 +46,7 @@ body {
 
   .eyebrow::before {
     content: "";
-    @apply h-px w-8 bg-accent/60;
+    @apply h-px w-8 bg-accent/80;
   }
 
   .card {
@@ -73,7 +75,7 @@ body {
 
   .community-callout {
     @apply border border-border bg-surface-raised/40 px-8 py-6 md:px-10 md:py-8;
-    border-left: 2px solid rgba(0, 255, 206, 0.45);
+    border-left: 2px solid rgba(249, 33, 25, 0.65);
   }
 
   .section-pad {
@@ -89,7 +91,9 @@ body {
   }
 
   .text-glow {
-    text-shadow: 0 0 40px rgba(0, 255, 206, 0.35);
+    text-shadow:
+      0 0 24px rgba(249, 33, 25, 0.22),
+      0 1px 1px rgba(5, 5, 5, 0.8);
   }
 
   .link-nav {
@@ -126,7 +130,7 @@ body {
 .hero-aurora-slot {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -152,9 +156,9 @@ body {
   border-radius: 50%;
   background: radial-gradient(
     circle at 50% 50%,
-    rgba(0, 255, 206, 0.14) 0%,
-    rgba(79, 70, 229, 0.08) 28%,
-    rgba(168, 85, 247, 0.05) 45%,
+    rgba(249, 33, 25, 0.16) 0%,
+    rgba(249, 33, 25, 0.08) 28%,
+    rgba(249, 33, 25, 0.04) 45%,
     transparent 68%
   );
   filter: blur(48px);
@@ -168,13 +172,13 @@ body {
   border-radius: 50%;
   background: conic-gradient(
     from 200deg at 50% 50%,
-    rgba(0, 255, 206, 0.55) 0deg,
-    rgba(45, 212, 191, 0.4) 55deg,
-    rgba(59, 130, 246, 0.45) 120deg,
-    rgba(129, 140, 248, 0.5) 180deg,
-    rgba(192, 132, 252, 0.42) 240deg,
-    rgba(244, 114, 182, 0.28) 300deg,
-    rgba(0, 255, 206, 0.5) 360deg
+    rgba(249, 33, 25, 0.55) 0deg,
+    rgba(249, 80, 70, 0.42) 55deg,
+    rgba(249, 50, 40, 0.38) 120deg,
+    rgba(249, 33, 25, 0.45) 180deg,
+    rgba(220, 30, 25, 0.35) 240deg,
+    rgba(255, 90, 80, 0.28) 300deg,
+    rgba(249, 33, 25, 0.5) 360deg
   );
   filter: blur(42px);
   opacity: 0.75;
@@ -246,15 +250,15 @@ body {
 .hero-grid-scroll {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
-  background-color: var(--background);
+  background-color: transparent;
   --grid-x: var(--page-gutter);
   background-image: linear-gradient(
-      rgba(0, 255, 206, 0.06) 1px,
+      rgba(249, 33, 25, 0.22) 1px,
       transparent 1px
     ),
-    linear-gradient(90deg, rgba(0, 255, 206, 0.06) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(249, 33, 25, 0.22) 1px, transparent 1px);
   background-size: var(--grid-size) var(--grid-size);
   background-position: var(--grid-x) 0;
   animation: hero-bg-scrolling-reverse 1.2s linear infinite;
@@ -275,9 +279,9 @@ body {
   pointer-events: none;
   background: linear-gradient(
       105deg,
-      rgba(5, 5, 5, 0.92) 0%,
-      rgba(5, 5, 5, 0.35) 42%,
-      transparent 62%
+      rgba(5, 5, 5, 0.88) 0%,
+      rgba(5, 5, 5, 0.3) 42%,
+      transparent 72%
     ),
     radial-gradient(
       ellipse 85% 65% at 18% 85%,
@@ -339,8 +343,8 @@ body {
   padding: 2px;
   background: linear-gradient(
     135deg,
-    rgba(0, 255, 206, 0.5) 0%,
-    rgba(0, 255, 206, 0.05) 40%,
+    rgba(249, 33, 25, 0.55) 0%,
+    rgba(249, 33, 25, 0.12) 40%,
     rgba(255, 255, 255, 0.08) 100%
   );
 }

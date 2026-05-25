@@ -7,9 +7,9 @@ const phrase = (
 
 function TickerItem() {
   return (
-    <span className="font-tektur shrink-0 text-lg font-medium uppercase tracking-wide text-foreground/90 md:text-xl">
+    <span className="font-tektur shrink-0 text-lg font-medium uppercase tracking-wide text-foreground md:text-xl">
       {phrase}
-      <span className="mx-10 text-accent/40" aria-hidden>
+      <span className="mx-10 text-accent/70" aria-hidden>
         ·
       </span>
     </span>

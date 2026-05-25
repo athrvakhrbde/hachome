@@ -12,7 +12,7 @@ type CommunityCardProps = {
 function CommunityCard({ label, title, description }: CommunityCardProps) {
   return (
     <li className="community-pillar">
-      <span className="font-tektur text-sm font-bold text-accent/50">{label}</span>
+      <span className="font-tektur text-sm font-bold text-accent">{label}</span>
       <div>
         <h3 className="font-tektur text-lg font-semibold text-foreground md:text-xl">{title}</h3>
         <p className="font-clash mt-2 text-sm leading-relaxed text-muted md:text-base">

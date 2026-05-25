@@ -10,14 +10,14 @@ export const site = {
     "https://docs.google.com/forms/d/e/1FAIpQLSfz5s_2biXXOEodc0tRTLv5o0BGZrpGZV_7Y4P1BYo84uZFtQ/viewform?usp=send_form",
   twitter: "https://x.com/hackhomehq",
   twitterHandle: "@hackhomehq",
-  logo: "/hackhome-logo.svg",
+  logo: "/hackhome-logo.png",
   ogImage: "/og-image.png",
 } as const;
 
 export const copy = {
   aboutHeadline: "Live together. Build full-time.",
   aboutLead:
-    "Hack Home removes all friction from daily life so residents can focus 100% on building. Meals, laundry, workspace, and mentorship are bundled in.",
+    "Hack Home removes all friction from daily life so residents can focus 100% on building. Meals, laundry, AI credits, and mentorship are bundled in.",
   residentPerks:
     "Residents get weekly 1:1 sessions, a 24/7 deep-focus workspace, and access to top founders, investors, and operators.",
   communityIntro:
@@ -27,7 +27,7 @@ export const copy = {
     "Residents come and go more fluidly than a fellowship model.",
 } as const;
 
-export const bundled = ["Meals", "Laundry", "Workspace", "Mentorship"] as const;
+export const bundled = ["Meals", "Laundry", "AI Credits", "Mentorship"] as const;
 
 export const communityPillars = [
   {
@@ -63,6 +63,6 @@ export const programming = [
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://hackhome.in";
 
-export const siteDescription = `${site.displayName}: live together for 3 to 6 months in ${site.location}. Co-living for builders with meals, laundry, workspace, and mentorship bundled in.`;
+export const siteDescription = `${site.displayName}: live together for 3 to 6 months in ${site.location}. Co-living for builders with meals, laundry, AI credits, and mentorship bundled in.`;
 
 export const navLinks = [] as const;

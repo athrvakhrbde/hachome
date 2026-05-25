@@ -12,7 +12,7 @@ const variants = {
   primary:
     "bg-accent text-background shadow-glow hover:brightness-110 active:scale-[0.98]",
   secondary:
-    "border border-border-strong bg-surface-raised/50 text-foreground hover:border-accent/40 hover:bg-accent-dim",
+    "border border-border-strong bg-surface-raised/50 text-foreground hover:border-accent/55 hover:bg-accent-dim",
   ghost: "text-accent hover:brightness-125",
 };
 

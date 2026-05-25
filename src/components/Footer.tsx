@@ -11,7 +11,7 @@ export function Footer() {
             <a href="/" className="inline-block">
               <HackhomeLogo />
             </a>
-            <p className="font-tektur mt-8 max-w-md text-xl font-medium leading-snug text-foreground/90">
+            <p className="font-tektur mt-8 max-w-md text-xl font-medium leading-snug text-foreground">
               {site.tagline}
             </p>
             <p className="font-clash mt-4 text-sm text-muted">
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="font-clash mt-16 border-t border-border pt-8 text-xs text-muted/50">
+        <p className="font-clash mt-16 border-t border-border pt-8 text-xs text-muted-subtle">
           © {new Date().getFullYear()} {site.name}
         </p>
       </PageContainer>

@@ -5,7 +5,7 @@ import { ButtonLink } from "./ButtonLink";
 
 export function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/85 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-xl">
       <PageContainer className="flex items-center justify-between py-4 md:py-5">
         <a href="/" className="block shrink-0 leading-none">
           <HackhomeLogo priority />

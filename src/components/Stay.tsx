@@ -38,7 +38,7 @@ export function Stay() {
         <SectionHeader
           eyebrow="04. Stay"
           headline="Room options."
-          subhead="Month-to-month or longer. Every plan includes stay, meals, laundry, workspace, and mentorship."
+          subhead="Month-to-month or longer. Every plan includes stay, meals, laundry, AI credits, and mentorship."
         />
 
         <ul className="mt-16 grid gap-4 md:grid-cols-2 md:gap-5">
